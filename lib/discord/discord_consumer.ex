@@ -18,13 +18,13 @@ defmodule Discord.DiscordConsumer do
 
     ## On Message x
         def handle_event({type = :TYPING_START, message}, state) do
-            Discord.DiscordLogger.metadata(type, message, [username: inspect(message.member.user.username)])
+            Discord.DiscordLogger.metadata(type, message, [username: Discord.DiscordUtils.get_username(message, :member)])
             Discord.DiscordLogger.info("#{inspect(Map.keys(message), [pretty: true])}")
             {:ok, state}
         end
 
         def handle_event({type = :MESSAGE_CREATE, message}, state) do
-            Discord.DiscordLogger.metadata(type, message, [username: inspect(message.author.username)])
+            Discord.DiscordLogger.metadata(type, message, [username: Discord.DiscordUtils.get_username(message, :author)])
             Discord.DiscordLogger.info("#{inspect(message.content)}")
             Discord.DiscordLogger.info("#{inspect(Map.keys(message), [pretty: true])}")
             case message.content do

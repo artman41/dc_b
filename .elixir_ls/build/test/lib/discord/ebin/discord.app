@@ -2,7 +2,8 @@
              [{applications,[kernel,stdlib,elixir,coxir]},
               {description,"discord"},
               {modules,['Elixir.Discord','Elixir.Discord.DiscordConsumer',
-                        'Elixir.Discord.DiscordLogger']},
+                        'Elixir.Discord.DiscordLogger',
+                        'Elixir.Discord.DiscordUtils']},
               {registered,[]},
               {vsn,"0.1.0"},
               {mod,{'Elixir.Discord',[logger]}}]}.
