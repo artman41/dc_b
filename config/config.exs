@@ -6,6 +6,9 @@ config :coxir, [
     token: "MzUyMDA2MjEwNjAzNDUwMzY4.DtNeng.IQlXJoT_O6NDFTmoJ9lWMUd4Tek"
 ]
 
-config :logger, [
-    level: :warn
+
+config :logger, :console, [
+    application: :discord,
+    format: "\n[$time $level]\nMetadata: $metadata\n--\nMessage: $message\n--\n",
+    metadata: [:event_type, :username, :user_id, :channel_id, :type, :tts]
 ]
