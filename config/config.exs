@@ -3,7 +3,7 @@
 use Mix.Config
 
 config :coxir, [
-    token: "MzUyMDA2MjEwNjAzNDUwMzY4.DtNeng.IQlXJoT_O6NDFTmoJ9lWMUd4Tek"
+    token: ""
 ]
 
 

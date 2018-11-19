@@ -1,9 +1,9 @@
-defmodule Discord.MixProject do
+defmodule DiscordBot.MixProject do
     use Mix.Project
 
     def project do
         [
-            app: :discord,
+            app: :discord_bot,
             version: "0.1.0",
             elixir: "~> 1.7",
             build_embedded: Mix.env == :prod,
@@ -15,7 +15,7 @@ defmodule Discord.MixProject do
     # Run "mix help compile.app" to learn about applications.
     def application do
         [
-            mod: {Discord, [
+            mod: {DiscordBot.Core, [
                     :logger
                 ]
             }

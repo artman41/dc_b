@@ -1,9 +1,10 @@
-{application,discord,
+{application,discord_bot,
              [{applications,[kernel,stdlib,elixir,coxir]},
-              {description,"discord"},
+              {description,"discord_bot"},
               {modules,['Elixir.DiscordBot.Core',
                         'Elixir.DiscordBot.Core.Commands.Engine',
                         'Elixir.DiscordBot.Core.Commands.Engine.Command',
+                        'Elixir.DiscordBot.Core.Commands.Engine.Command.Starter',
                         'Elixir.DiscordBot.Core.Commands.Handler',
                         'Elixir.DiscordBot.Core.Consumer',
                         'Elixir.DiscordBot.Core.Consumer.State',
@@ -13,4 +14,4 @@
                         'Elixir.DiscordBot.Utils.Settings']},
               {registered,[]},
               {vsn,"0.1.0"},
-              {mod,{'Elixir.Discord',[logger]}}]}.
+              {mod,{'Elixir.DiscordBot.Core',[logger]}}]}.

@@ -1,8 +1,4 @@
-defmodule DiscordTest do
+defmodule DiscordBot.Test do
     use ExUnit.Case
-    doctest Discord
-
-    test "greets the world" do
-        assert Discord.hello() == :world
-    end
+    doctest DiscordBot
 end
